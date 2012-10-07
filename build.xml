@@ -6,7 +6,7 @@
               as the first entry and export the buildfile again. -->
 
 <!--<project basedir="/home/hesa/workspace/Moon" default="build" name="Moon">-->
-<project basedir="/var/lib/jenkins/jobs/Moon/workspace/Moon" default="build" name="Moon">
+<project basedir="/var/lib/jenkins/jobs/Moon/workspace" default="build" name="Moon">
 
   <property environment="env"/>
   <property name="ECLIPSE_HOME" value="../../opt/eclipse"/>

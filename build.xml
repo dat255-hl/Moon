@@ -5,12 +5,17 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="Moon">
+
+
+
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../opt/eclipse"/>
+    <property name="eclipse.home" value="../../opt/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
     <property name="source" value="1.6"/>
+
     <path id="Android 4.1.libraryclasspath">
         <pathelement location="../../android-sdks/platforms/android-16/android.jar"/>
     </path>
@@ -18,7 +23,9 @@
         <pathelement location="libs/android-support-v4.jar"/>
     </path>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar"/>
+        <pathelement location="/home/hesa/opt/junit/junit.jar"/> 
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar"/> 
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.8.3.v20120321-1730/lib/ant-junit.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
     </path>
     <path id="Moon.classpath">
@@ -81,8 +88,8 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="NadaTest">
 
+    <target name="NadaTest">
         <junit printsummary="on" fork="true" haltonfailure="yes">
                 <formatter type="xml" />
                 <batchtest todir="${test.report.dir}">
@@ -116,6 +123,10 @@
 <!-- ====================================================================== -->
 
 <property name="coverage.dir" value="${basedir}/reports/emma" />     <!-- directory which emma coverage reports will be written to -->
+<!-- 
+  <property name="instr.dir" value="${basedir}/target/emmainstr" />   
+-->
+ <!-- directory which emma instrumentation classes will be written to -->
 <property name="instr.dir" value="${basedir}/target/emmainstr" />    <!-- directory which emma instrumentation classes will be written to -->
 <property name="emma.dir" value="/home/hesa/opt/emma/" />             <!-- directory that contains emma.jar and emma_ant.jar -->
 

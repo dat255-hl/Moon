@@ -26,7 +26,7 @@
   </path>
 
   <path id="JUnit 4.libraryclasspath">
-    <pathelement location="/home/hesa/opt/junit/junit.jar"/> 
+    <pathelement location="./libs/junit.jar"/> 
     <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar"/> 
     <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.8.3.v20120321-1730/lib/ant-junit.jar"/>
     <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>

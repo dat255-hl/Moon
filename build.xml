@@ -93,10 +93,17 @@
         <junit printsummary="on" fork="true" haltonfailure="yes">
                 <formatter type="xml" />
                 <batchtest todir="${test.report.dir}">
-                    <fileset dir="${src.dir}">
+<!--                    <fileset dir="${src.dir}"> -->
+                    <fileset dir="./src"> 
                         <include name="**/*Test*.java" />
                     </fileset>
                 </batchtest>
+
+		<classpath>
+		  <pathelement location="./libs/junit.jar"
+			       path="./libs/junit.jar"/>
+		</classpath>
+
 	</junit>
 
 

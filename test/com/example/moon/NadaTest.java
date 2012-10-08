@@ -32,7 +32,7 @@ public class NadaTest {
 		Nada n = new Nada();
 		assertEquals("threeTimes", -3, n.timesThree(-1));	
 		assertEquals("threeTimes",  0, n.timesThree(0));	
-		assertEquals("twothreeTimes",  3, n.timesThree(1));	
+		assertEquals("threeTimes",  3, n.timesThree(1));	
 	}
 	
 	@Test

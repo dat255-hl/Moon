@@ -30,9 +30,9 @@ public class NadaTest {
 	@Test
 	public void testThreeTimes() {
 		Nada n = new Nada();
-		assertEquals("twoTimes", -3, n.timesThree(-1));	
-		assertEquals("twoTimes",  0, n.timesThree(0));	
-		assertEquals("twoTimes",  1, n.timesThree(1));	
+		assertEquals("threeTimes", -3, n.timesThree(-1));	
+		assertEquals("threeTimes",  0, n.timesThree(0));	
+		assertEquals("twothreeTimes",  3, n.timesThree(1));	
 	}
 	
 	@Test

@@ -28,6 +28,14 @@ public class NadaTest {
 	}
 	
 	@Test
+	public void testThreeTimes() {
+		Nada n = new Nada();
+		assertEquals("twoTimes", -1, n.timesThree(-1));	
+		assertEquals("twoTimes",  0, n.timesThree(0));	
+		assertEquals("twoTimes",  1, n.timesThree(1));	
+	}
+	
+	@Test
 	public void testDoNada() {
 		Nada n = new Nada();
 		n.doNada();
